@@ -1,7 +1,7 @@
 FROM gocd/gocd-agent-centos-8:v21.4.0
 
 USER root
-RUN dnf module install -y python39 && pip3 install ansible
+RUN dnf module install -y python39 && pip3 install ansible ansible-lint ansible-test
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
