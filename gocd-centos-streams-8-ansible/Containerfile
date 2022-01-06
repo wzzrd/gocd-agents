@@ -1,0 +1,7 @@
+FROM gocd/gocd-agent-centos-8:latest
+
+RUN dnf module install -y python39 && pip3 install ansible
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+USER go
