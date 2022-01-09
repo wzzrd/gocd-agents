@@ -1,4 +1,4 @@
-FROM registry.thuisnet.lan/maxim/gocd-agent-fedora-30-base:21.4.0-13469-maxim1
+FROM registry.thuisnet.lan/maxim/gocd-agent-fedora-35-base:21.4.0-13469-maxim1
 
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 
