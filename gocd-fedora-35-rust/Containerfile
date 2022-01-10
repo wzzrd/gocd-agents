@@ -6,6 +6,6 @@ RUN dnf -y install gcc && dnf clean all
 USER go
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/go/.cargo/bin
-RUN cargo install generate-rpm
+RUN cargo install cargo-generate-rpm
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
