@@ -1,7 +1,9 @@
 FROM registry.thuisnet.lan/maxim/gocd-agent-fedora-35-base:maxim-v21.4.0
 
+USER root
+RUN dnf -y install gcc && dnf clean all
+
+USER go
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
-
-USER go
